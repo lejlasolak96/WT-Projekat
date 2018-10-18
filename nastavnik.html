@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="/nastavnik.css">
+
+<div class="okvir">
+	<input type="text" id="index" placeholder="Broj indexa">
+	<input type="number" id="spirala" placeholder="Spirala">
+	
+	<button id="izvjestaj"
+	onclick="KreirajFajl.kreirajIzvjestaj(document.getElementById('spirala').value,document.getElementById('index').value,
+	function(error, data) {
+
+	    document.getElementById('poruka').innerHTML='';
+	    var link=document.getElementById('link');
+	    var link_b=document.getElementById('b-link');
+	    link_b.style.display='none';
+
+	    link.href='/download';
+
+	     if(data.data){
+
+			link_b.style.display='block';
+			link.href+='?izvjestaj='+data.data;
+	     }
+	     else document.getElementById('poruka').innerHTML=data.message;
+
+	});">Generiši izvještaj</button>
+
+	<button id="bodovi"
+	onclick="KreirajFajl.kreirajBodove(document.getElementById('spirala').value,document.getElementById('index').value,
+	function(error, data) {
+
+	    document.getElementById('poruka').innerHTML='';
+	    var link_b=document.getElementById('b-link');
+	    document.getElementById('poruka').innerHTML=data.poruka;
+	    link_b.style.display='none';
+	    link_b.href='/download';
+
+	});">Generiši bodove</button>
+
+	<div>
+		<div id="poruka"></div>
+		<button id="b-link">
+			<a id='link' href='/download'>Izvještaj</a>
+			<i class="fa fa-download" aria-hidden="true"></i>
+		</button>
+	</div>
+
+</div>

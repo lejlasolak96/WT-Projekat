@@ -1,0 +1,59 @@
+.okvir {
+
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	margin: auto;
+	padding: 30px;
+	max-width: 1000px;
+	overflow: hidden;
+	border: 5px solid #E4FDE1;
+	background-color: #028090;
+	background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+	grid-row-gap: 15px;
+	grid-column-gap: 15px;
+}
+
+button {
+
+	background-color: #D8262E;
+	padding: 5px;
+	color: #FDFFFC;
+	border: 2px solid #E4FDE1;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15pt;
+	width: 100%;
+	height: 100%;
+}
+
+input {
+
+	font-size: 12.5pt;
+	border: none;
+	border-bottom: 4px solid #D8262E;
+	background-color: #E4FDE1;
+	font-family: sans-serif;
+	line-height: 2em;
+}
+
+#b-link{
+
+	display: none;
+}
+
+#link a{
+	
+	border: none;
+	color: #FDFFFC;
+	font-family: sans-serif;
+}
+
+a { color: #FDFFFC;}
+
+@media(max-width: 700px) {
+
+	.okvir {
+		height: 100%;
+		grid-template-columns: repeat(1,1fr);
+	}
+}

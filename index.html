@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>index</title>
+		<link rel="stylesheet" type="text/css" href="/common.css">
+		<script src="https://use.fontawesome.com/6933b4f2d9.js"></script>
+	</head>
+
+	<body onload="ShowLinks();">
+
+	<script src="/menuLoad.js"></script>
+	<script src="/loading.js"></script>
+
+	<script src="/validacija.js"></script>
+	<script src="/login.js"></script>
+	<script src="/poruke.js"></script>
+	<script src="/greske.js"></script>
+
+	<script src="/razmjena.js"></script>
+	<script src="/unoskomentara.js"></script>
+
+	<script src="/kreirajFajl.js"></script>
+	<script src="/bitbucketApi.js"></script>
+
+	<script src="/unosSpiska.js"></script>
+	<script src="/listaKorisnika.js"></script>
+
+	<div class="nav">
+			<div class="slika">
+				<img src="/loho12.png" alt="greska">
+			</div>
+			<ul class="menu" id="menu">
+				<li id="deploy"><a href="https://wtprojekat17266.herokuapp.com/">Deployana verzija</a></li>
+				<li id="login" onclick="Load('login');"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</li>
+				<li id="statistika" onclick="Load('statistika');"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Statistika</li>
+				<li id="komentari" onclick="Load('unoskomentara');"><i class="fa fa-comments" aria-hidden="true"></i> Unos komentara</li>
+				<li id="spisak" onclick="Load('unosSpiska');"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Unos spiska</li>
+				<li id="nastavnik" onclick="Load('nastavnik');"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Nastavnik</li>
+				<li id="bitbucket" onclick="Load('bitbucketPozivi');"><i class="fa fa-bitbucket" aria-hidden="true"></i> Bitbucket pozivi</li>
+				<li id="korisnici" onclick="Load('listaKorisnika'); Korisnici();"><i class="fa fa-list-alt" aria-hidden="true"></i> Lista korisnika</li>
+				<li id="logout"><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
+			</ul>
+		</div>
+		<div id="podstranice-container" class="podstranice"></div>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+.glavni {
+	
+	display: grid;
+	background-color: #028090;
+	background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+	margin: auto;
+	border: 5px solid #E4FDE1;
+	max-width: 1000px;
+    grid-template-areas:
+		"zaglavlje"
+		"podnaslov"
+		"treci-dio" 
+		"zadnji-dio";
+}
+
+.zaglavlje {
+	
+	grid-area: zaglavlje;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #114B5F;
+}
+
+.podnaslov {
+		
+	border-top: 4px solid #E4FDE1;
+	border-bottom: 4px solid #E4FDE1;
+	grid-area: podnaslov;
+	display: flex;
+	height: fit-content;
+	padding-left: 50px;
+	padding-right: 60px;
+}
+
+h2 {
+
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+.text-ime {
+	
+	width: 50%;
+	float: right;
+	text-align: right;
+	font-size: 15pt;
+}
+
+.treci-dio {
+	
+	display: grid;
+	grid-area: treci-dio;
+	grid: [r1-start] "info table" [r1-end];
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.podaci {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-right: 4px solid #E4FDE1;
+	padding: 10px 30px;
+	font-size: 15pt;
+}
+
+.zadnji-dio {
+
+	grid-area: zadnji-dio;
+}
+
+.spirala-dio, .komentari-dio {
+	
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.spirala-dio h1 {
+	
+	border: 4px solid #114B5F;
+	padding: 10px 0px;
+	background-color: #D8262E;
+}
+
+.komentari-dio {
+	
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 15px;
+}
+
+.zadnji-dio h1 {
+	
+	text-align: center;
+}
+
+.komentari {
+	
+	border-bottom: 4px solid #E4FDE1;
+	border-top: 4px solid #E4FDE1;
+	background-color: #114B5F;
+	padding: 20px 0px;
+	margin: auto;
+}
+
+.komentar {
+	
+	border: 4px solid #114B5F;
+	overflow-x: hidden;
+	overflow-y: auto;
+	word-wrap: break-word;
+	background-color: #E4FDE1;
+	color: black;
+	font-family: sans-serif;
+	font-size: 15pt;
+	height: 300px;
+}
+
+.stranice {
+	
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.pagination {
+	
+    display: inline-block;
+}
+
+.pagination button {
+	
+    color: #114B5F;
+	font-weight: bold;
+    float: left;
+	font-size: 12pt;
+    padding: 10px 15px;
+    text-decoration: none;
+	background-color: #E4FDE1;
+    border: 1px solid #114B5F;
+}
+
+.pagination button.active {
+	
+    background-color: #D8262E;
+    color: #FDFFFC;
+    border: 1px solid #114B5F;
+}
+
+.tabela {
+	
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content:center;
+	align-items:center;
+}
+
+table, th, td{
+
+	border: 4px solid #114B5F;
+	padding: 5px;
+}
+
+table {
+
+	word-wrap: break-word;
+	word-break: break-all;
+	width: 100%;
+    height: 100%;
+	border-collapse: collapse;
+	font-size: 15pt;
+}
+
+table th {
+	
+	background-color: #D8262E;
+	color: #FDFFFC;
+}
+
+table tr {
+	
+	background-color: #E4FDE1;
+}
+
+h1, h2, h3, .podaci p, .tabela {
+	
+	font-family: sans-serif;
+	color: #FDFFFC;
+}
+
+@media(max-width: 700px) {
+	
+	.treci-dio {
+	
+		grid: [r1-start] "info" [r1-end]
+			  [r2-start] "table" [r2-end];
+	}
+	
+	.podaci {
+		
+		border-right: none;
+		border-bottom: 4px solid #E4FDE1;
+	}
+	
+	.komentari-dio {
+		
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	table {
+
+		font-size: 15pt;
+	}
+}

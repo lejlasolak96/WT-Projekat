@@ -1,0 +1,144 @@
+.okvir {
+	
+	display: grid;
+	margin: auto;
+	max-width: 1000px;
+	padding: 25px;
+	overflow: hidden;
+	border: 5px solid #E4FDE1;
+	background-color: #028090;
+	background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+	grid-row-gap: 30px;
+}
+
+.zadnji_red {
+	
+	width: 100%;
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 15px;
+}
+
+.zadnji_red button {
+
+	float: right;
+	padding: 5px 30px;
+	background-color: #D8262E;
+	color: #FDFFFC;
+	border: 2px solid #E4FDE1;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15pt;
+	width:100%;
+}
+
+table, tr, td{
+
+	text-align: center;
+	border: 4px solid #114B5F;
+	font-size: 12.5pt;
+	font-family: sans-serif;
+	background-color: #E4FDE1;
+	color: #114B5F;
+}
+
+table {
+
+	width: 100%;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+input, textarea {
+
+	margin: auto;
+	font-size: 12.5pt;
+	border: none;
+	border-bottom: 4px solid #D8262E;
+	background-color: #E4FDE1;
+	font-family: sans-serif;
+	display: block;
+	width: 100%;
+}
+
+textarea{
+	resize: none;
+}
+
+input {
+	line-height: 2em;
+}
+
+td button{
+
+	width: 50%;
+	height: 50px;
+	margin: auto;
+	float: left;
+	border: none;
+}
+
+.up, .down {
+
+	color: #E4FDE1;
+	font-size: 15px;
+}
+
+.up {
+	background-color: #028090;
+}
+
+.up:hover { background-color: #114B5F; }
+.down:hover { background-color: #A81111; }
+
+.down{
+
+	background-color: #D8262E;
+}
+
+@media(max-width: 700px) {
+	
+	.zadnji_red {
+
+		height: 100%;
+	    display: grid;
+	    grid: [r1-start]"a"[r1-end]
+			  [r2-start]"b"[r2-end]
+	          [r3-start]"c"[r3-end];
+		grid-row-gap: 15px;
+	}
+	
+	tr, td, input {
+
+		display: block;
+		padding: 0px;
+	}
+
+	table, tr, td{
+
+		border: none;
+	}
+
+	tr{
+
+		border: 10px solid #114B5F;
+	}
+
+	td button{
+
+		padding: 10px;
+		float: none;
+		width: 100%;
+		height: 30px;
+	}
+
+	#kraj{
+
+		width: 100%;
+	}
+
+	textarea{
+		width: 99%;
+	}
+}

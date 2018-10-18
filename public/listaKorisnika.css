@@ -1,0 +1,95 @@
+.okvir {
+
+	display: grid;
+	margin: auto;
+	padding: 25px;
+	max-width: 1500px;
+	overflow: hidden;
+	border: 5px solid #E4FDE1;
+	background-color: #028090;
+	background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+	grid-column-gap: 15px;
+	grid-row-gap: 30px;
+	grid-template-columns: 2fr 1fr;
+}
+
+button {
+
+	grid-column: 2;
+	grid-row: 1;
+	padding: 5px;
+	background-color: #D8262E;
+	color: #FDFFFC;
+	border: 2px solid #E4FDE1;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+input {
+
+	grid-column: 1;
+	grid-row: 1;
+	font-size: 12.5pt;
+	border: none;
+	border-bottom: 4px solid #D8262E;
+	background-color: #E4FDE1;
+	font-family: sans-serif;
+	line-height: 2em;
+}
+
+#lista{
+
+	background-color: #E4FDE1;
+	grid-column: 1/3;
+	grid-row: 2;
+	border: 4px solid #114B5F;
+	overflow-x: auto;
+}
+
+td button{
+
+	margin: auto;
+	float: left;
+	border: none;
+	width: 100%;
+	font-size: 12pt;
+}
+
+.unverify{
+
+	background-color: #028090;
+}
+
+table, tr, td, th{
+
+	width: auto;
+	font-size: 12.5pt;
+	font-family: sans-serif;
+	background-color: #E4FDE1;
+	padding: 5px;
+}
+
+table {
+
+	width: 100%;
+	border-collapse:collapse;
+}
+
+tr {
+
+	border:none;
+}
+
+th, td {
+
+	text-align: center;
+	border-collapse:collapse;
+	border: 2px solid #114B5F;
+}
+
+th {
+
+	background-color: #D8262E;
+	color: #FDFFFC;
+}

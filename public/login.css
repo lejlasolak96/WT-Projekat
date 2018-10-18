@@ -1,0 +1,126 @@
+.okvir {
+
+	height: 100vh;
+	max-width: 1000px;
+	display: flex;
+	margin: auto;
+}
+
+.okvir_formi {
+	
+	margin: auto;
+	vertical-align: middle;
+	display: grid;
+	grid: [r1-start] "login register" [r1-end];
+	grid-column-gap: 40px;
+}
+
+.forma, .forma_r{
+	
+	background-color: #028090;
+	background-image: url("https://www.transparenttextures.com/patterns/elegant-grid.png");
+	border: 5px solid #E4FDE1;
+	display: block;
+}
+
+#poruke_r {
+
+	color: white;
+	width: 82%;
+	font-weight: bold;
+	font-size: 15pt;
+	margin: auto;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.forma_login {
+
+	display: grid;
+	padding: 50px;
+}
+
+.forma_register_student, .forma_register_nastavnik {
+
+	display: grid;
+	padding: 50px;
+}
+
+.forma-nastavnik {
+
+	display: none;
+}
+
+input, select {
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 2px;
+	font-size: 15pt; 
+	border: none;
+	border-bottom: 4px solid #D8262E;
+	background-color: #E4FDE1;
+	font-family: sans-serif;
+}
+
+label, h1{
+	
+	font-size: 15pt;
+	color: #FDFFFC;
+	font-family: sans-serif;
+}
+h1 {
+
+	font-size: 25pt;
+	margin: auto;
+	text-align: center;
+	padding: 5px;
+	background-color: #114B5F;
+	border-bottom: 4px solid #E4FDE1;
+}
+
+button {
+	
+	border: 2px solid #E4FDE1;
+	background-color: #D8262E;
+	margin-top: 15px;
+	font-size: 15pt;
+	font-weight: bold;
+	color: #FDFFFC;
+	padding: 5px;
+	font-family: sans-serif;
+}
+
+#student_reg, #nastavnik_reg {
+
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	border-top: none;
+}
+
+#nastavnik_reg:hover:not(.active), #student_reg:hover:not(.active) {background-color: #111;}
+
+#nastavnik_reg {
+
+	float: right;
+	background-color: #333;
+}
+
+#student_reg {
+
+	float: left;
+}
+@media(max-width: 700px) {
+	
+	.okvir_formi {
+
+		grid: [r1-start] "login" [r1-end]
+		[r2-start] "register" [r2-end];
+		grid-row-gap: 40px;
+	}
+	.okvir{
+
+		display: block;
+	}
+}

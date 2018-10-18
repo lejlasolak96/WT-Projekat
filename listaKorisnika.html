@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/listaKorisnika.css">
+<script src="/listaKorisnika.js"></script>
+
+<div class="okvir">
+	<input type="text" name="pretraga" id="pretraga" placeholder="Pretraga po korisničkom imenu...">
+	<button
+	onclick="Pretrazi(document.getElementById('pretraga').value,
+	function(err, data) {
+	    document.getElementById('lista').innerHTML='';
+		document.getElementById('lista').innerHTML=data.data;
+	});">Search</button>
+	<div id="lista"></div>
+</div>

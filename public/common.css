@@ -1,0 +1,83 @@
+body, .slika {
+
+	margin: 0px;
+	background-color: #114B5F;
+	background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+}
+
+ul.menu {
+
+	float: right;
+	width: 90%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333333;
+	font-size: 15pt;
+	margin: 0px;
+	padding: 0px;
+}
+.podstranice{
+
+	font-size: 15pt;
+	color: #FDFFFC;
+}
+
+table,tr,td{
+
+	color: #111111;
+}
+
+.nav{display: inline-block; width: 100%}
+.slika{ float: left; width: 10%}
+.slika img { width: 5em; height: 5em; }
+
+ul.menu li {
+
+	display: none;
+	float: left;
+    color: #FDFFFC;
+	text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+#logout a,#deploy a{
+
+	color: #FDFFFC;
+	text-decoration: none;
+	font-size: 15pt;
+}
+
+ul.menu li .active {background-color: #D8262E;}
+
+ul.menu li .right {float: right;}
+
+img {
+
+	height: 10em;
+}
+
+#menuB {
+
+	background-color: #D8262E;
+	padding: 5px;
+	color: #FDFFFC;
+	border: 2px solid #E4FDE1;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15pt;
+	width: 100%;
+	height: 100%;
+}
+
+@media(max-width: 700px) {
+
+	ul.menu, .slika, ul.menu li.right, ul.menu li { float: none; }
+	ul.menu, .slika{width: 100%;}
+}
+.slika {
+
+	text-align: center;
+}
+
+

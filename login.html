@@ -1,0 +1,144 @@
+<link rel="stylesheet" type="text/css" href="/login.css">
+
+<div class="okvir">
+
+	<div class="okvir_formi">
+
+		<div class="forma">
+
+			<h1><i class="fa fa-user" aria-hidden="true"></i>                   Login</h1>
+
+			<form class="forma_login" action="/login" method="post">
+
+				<label for="email-l">Username:</label>
+				<input type="text" id="email-l" name="email">
+
+				<label for="pass-l">Password:</label>
+				<input type="password" id="pass-l" name="pass">
+
+				<button type="submit" name="login" id="login">Login</button>
+
+			</form>
+		</div>
+
+		<div class="forma_r">
+
+			<h1><i class="fa fa-user-plus" aria-hidden="true"></i>              Register</h1>
+			<button name="student" id="student_reg" class="active"
+			        onclick="registrujStudenta()">Student</button>
+			<button name="nastavnik" id="nastavnik_reg"
+			        onclick="registrujNastavnika()">Nastavnik</button>
+
+			<div class="forma-student">
+
+				<form class="forma_register_student" action="/studentRegister" method="post">
+
+					<label for="imeprezime-s">Ime i prezime:</label>
+					<input type="text" id="imeprezime-s" name="imeprezime"
+					       onblur="var rez=Validacija.validirajImeiPrezime(this.value);
+									poruka(rez,'poruke_r',8);">
+
+					<label for="korisnicko">Korisničko ime:</label>
+					<input type="text" id="korisnickos" name="k-ime"
+					       onblur="var rez=Validacija.validirajKorisnicko(this.value);
+									poruka(rez,'poruke_r',10);">
+
+					<label for="index">Broj indexa:</label>
+					<input type="text" id="index" name="index"
+					       onblur="var rez=Validacija.validirajIndex(this.value);
+									poruka(rez,'poruke_r',1);">
+
+					<label for="grupa">Broj grupe:</label>
+					<input type="number" name="grupa" id="grupa"
+					       onblur="var rez=Validacija.validirajGrupu(this.value);
+									poruka(rez,'poruke_r',2);">
+
+					<label for="godina">Akademska godina:</label>
+					<input type="text" id="godina" name="godina"
+					       onblur="var rez=Validacija.validirajAkGod(this.value);
+									poruka(rez,'poruke_r',5);">
+
+					<label for="pass_s">Password:</label>
+					<input type="password" id="pass_s" name="pass"
+					       onblur="var rez=Validacija.validirajPassword(this.value);
+							       poruka(rez,'poruke_r',3);">
+
+					<label for="pass_cs">Potvrda passworda:</label>
+					<input type="password" id="pass_cs" name="pass_c"
+					       onblur="var rez=Validacija.validirajPotvrdu(document.getElementById('pass_s').value,this.value);
+								   poruka(rez,'poruke_r',4);">
+
+					<label for="b-url">BitBucket URL:</label>
+					<input type="text" id="b-url" name="url"
+					       onblur="var rez=Validacija.validirajBitbucketURL(this.value);
+							       poruka(rez,'poruke_r',6);">
+
+					<label for="b-ssh">BitBucket SSH:</label>
+					<input type="text" id="b-ssh" name="ssh"
+					       onblur="var rez=Validacija.validirajBitbucketSSH(this.value);
+							       poruka(rez,'poruke_r',7);">
+
+					<label for="repo">Naziv repozitorija:</label>
+					<input type="text" id="repo" name="repo"
+					       onblur="var rez=Validacija.validirajNazivRepozitorija(null,this.value);
+							       poruka(rez,'poruke_r',9);">
+
+					<button type="submit" name="register" id="register_s">Register</button>
+
+				</form>
+			</div>
+
+			<div class="forma-nastavnik">
+				<form class="forma_register_nastavnik" action="/nastavnikRegister" method="post">
+
+					<label for="imeprezime-n">Ime i prezime:</label>
+					<input type="text" id="imeprezime-n" name="imeprezime"
+					       onblur="var rez=Validacija.validirajImeiPrezime(this.value);
+						       poruka(rez,'poruke_r',8);">
+
+					<label for="korisnicko">Korisničko ime:</label>
+					<input type="text" id="korisnicko" name="k-ime"
+					       onblur="var rez=Validacija.validirajKorisnicko(this.value);
+								poruka(rez,'poruke_r',10);">
+
+					<label for="mail">Fakultetski e-Mail:</label>
+					<input type="text" id="mail" name="mail"
+					       onblur="var rez=Validacija.validirajFakultetski(this.value);
+							   poruka(rez,'poruke_r',0);">
+
+					<label for="maxgrupa">Maximalni broj grupa:</label>
+					<input type="text" id="maxgrupa" name="maxgrupa"
+					       onblur="Validacija.postaviMaxGrupa(this.value);">
+
+					<label for="repo-regex">Regex za validaciju naziva repozitorija:</label>
+					<input type="text" id="repo-regex" name="regex">
+
+					<label for="semestar">Trenutni semestar:</label>
+					<select name="semestar" id="semestar" onchange="Validacija.postaviTrenSemestar(this.value)">
+						<option value=0>Zimski</option>
+						<option value=1>Ljetni</option>
+					</select>
+
+					<label for="a-godina">Trenutna akademska godina:</label>
+					<input type="text" id="a-godina" name="godina"
+					       onblur="var rez=Validacija.validirajAkGod(this.value);
+						       poruka(rez,'poruke_r',5);">
+
+					<label for="pass_n">Password:</label>
+					<input type="password" id="pass_n" name="pass"
+					       onblur="var rez=Validacija.validirajPassword(this.value);
+						       poruka(rez,'poruke_r',3);">
+
+					<label for="pass_cn">Potvrda passworda:</label>
+					<input type="password" id="pass_cn" name="pass_c"
+					       onblur="var rez=Validacija.validirajPotvrdu(document.getElementById('pass_n').value,this.value);
+						       poruka(rez,'poruke_r',4);">
+
+					<button type="submit" name="register" id="register_n">Register</button>
+
+				</form>
+			</div>
+			<div id="poruke_r"></div>
+		</div>
+	</div>
+</div>

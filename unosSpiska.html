@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/unosSpiska.css">
+
+<div class="okvir">
+
+	<textarea id="sp"></textarea>
+	<input type="number" id="spirala" placeholder="Spirala">
+
+	<button type="submit"
+	onclick="kreirajSpisak(document.getElementById('sp').value,document.getElementById('spirala').value,
+	function(err, data) {
+	    document.getElementById('poruka').innerHTML='';
+		document.getElementById('poruka').innerHTML=data.poruka;
+	});">SUBMIT</button>
+
+	<div id="poruka">
+	</div>
+</div>

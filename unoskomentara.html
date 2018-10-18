@@ -1,0 +1,66 @@
+<link rel="stylesheet" type="text/css" href="/unoskomentara.css">
+
+<div class="okvir">
+
+	<div class="tabela">
+
+		<table id="tabela">
+
+			<tr>
+				<td>A</td>
+				<td><textarea id="komentar1" name="komentar" placeholder="Komentar"></textarea></td>
+				<td><button class="up" onclick="RazmijeniGornji(this)"><i class="fa fa-thumbs-o-up"></i></button>
+					<button class="down" onclick="RazmijeniDonji(this)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>B</td>
+				<td><textarea id="komentar2" name="komentar" placeholder="Komentar"></textarea></td>
+				<td><button class="up" onclick="RazmijeniGornji(this)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+					<button class="down" onclick="RazmijeniDonji(this)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>C</td>
+				<td><textarea id="komentar3" name="komentar" placeholder="Komentar"></textarea></td>
+				<td><button class="up" onclick="RazmijeniGornji(this)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+					<button class="down" onclick="RazmijeniDonji(this)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>D</td>
+				<td><textarea id="komentar4" name="komentar" placeholder="Komentar"></textarea></td>
+				<td><button class="up" onclick="RazmijeniGornji(this)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+					<button class="down" onclick="RazmijeniDonji(this)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+
+			<tr>
+				<td>E</td>
+				<td><textarea id="komentar5" name="komentar" placeholder="Komentar"></textarea></td>
+				<td><button class="up" onclick="RazmijeniGornji(this)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+					<button class="down" onclick="RazmijeniDonji(this)"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<div class="zadnji_red">
+		<input type="number" id="spirala" name="spirala" min="1" max="4" placeholder="Spirala">
+		<input type="text" id="index" name="index" placeholder="Broj indexa">
+
+		<button type="submit" name="btnsubmit" id="kraj"
+		onclick="KreirajFajl.kreirajKomentar(document.getElementById('spirala').value.toString(),document.getElementById('index').value,kreirajNizIzTabele(),
+				function(err, data) {
+					document.getElementById('poruka').innerHTML=data.message;
+				});"
+		>Potvrdi</button>
+
+	</div>
+	<div id="poruka"></div>
+</div>

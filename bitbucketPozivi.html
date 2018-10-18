@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="/bitbucketPozivi.css">
+
+<div class="okvir">
+	<input type="text" id="key" placeholder="KEY">
+	<input type="text" id="secret" placeholder="SECRET">
+	<input type="text" id="naziv" placeholder="Naziv repozitorija">
+	<input type="text" id="branch" placeholder="Naziv branch-a">
+	<input type="text" id="godina" placeholder="Trenutna godina">
+	<div id="poruka"></div>
+
+	<button id="lista"
+	onclick="BitbucketApi.dohvatiAccessToken(document.getElementById('key').value,document.getElementById('secret').value,
+	function(error, data) {
+
+	    if(error) document.getElementById('poruka').innerHTML=data;
+
+	    else{
+
+		 BitbucketApi.dohvatiRepozitorije(data, document.getElementById('godina').value,document.getElementById('naziv').value, document.getElementById('branch').value,
+		 function(err, lista) {
+
+		    if(err) document.getElementById('poruka').innerHTML=err;
+
+			else{
+
+				KreirajFajl.kreirajListu(document.getElementById('godina').value,lista,
+				function(e,d) {
+
+					if(e) document.getElementById('poruka').innerHTML=e;
+					else document.getElementById('poruka').innerHTML='Kreirana je datoteka sa '+d.data+' studenata';
+
+				});
+			}
+
+		 });
+
+		 }
+
+	});"
+	>Generiši listu</button>
+</div>

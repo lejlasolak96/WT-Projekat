@@ -1,0 +1,28 @@
+{
+  "name": "spirala3",
+  "version": "1.0.0",
+  "description": "spirala 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lsolak@bitbucket.org/lsolak/wtprojekat17266.git"
+  },
+  "author": "Lejla Solak",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/lsolak/wtprojekat17266#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mysql2": "^1.5.1",
+    "pug": "^2.0.0-rc.4",
+    "sequelize": "^4.31.2"
+  }
+}
